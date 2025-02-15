@@ -1,0 +1,50 @@
+[
+    {
+        "id": "1",
+        "name": "Siyah Basic Tişört",
+        "category": "Tişört",
+        "gender": "Erkek",
+        "size": "M, L, XL",
+        "color": "Siyah",
+        "purchase_price": 80.0,
+        "price": 150.0,
+        "stock_quantity": 50,
+        "image_path": "path/to/image.jpg"
+    },
+    {
+        "id": "1001",
+        "name": "Basic T-shirt",
+        "category": "Tişört",
+        "gender": "Erkek",
+        "size": "M",
+        "color": "Siyah",
+        "price": 199.99,
+        "purchase_price": 199.99,
+        "stock_quantity": 46,
+        "image_path": null
+    },
+    {
+        "id": "12312",
+        "name": "Basit siyah renkli tişört",
+        "category": "Tişört",
+        "gender": "Erkek",
+        "size": "",
+        "color": "Siyah",
+        "price": 30.0,
+        "purchase_price": 10.0,
+        "stock_quantity": 9,
+        "image_path": null
+    },
+    {
+        "id": "1234",
+        "name": "SİA",
+        "category": "Tişört",
+        "gender": "Erkek",
+        "size": "L",
+        "color": "Siyah",
+        "price": 299.0,
+        "purchase_price": 99.0,
+        "stock_quantity": 80,
+        "image_path": null
+    }
+]

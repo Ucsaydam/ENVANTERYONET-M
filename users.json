@@ -1,0 +1,28 @@
+{
+    "users": [
+        {
+            "username": "admin",
+            "password": "123456",
+            "store": "Merkez",
+            "role": "admin"
+        },
+        {
+            "username": "satis1",
+            "password": "123456",
+            "store": "Şube 1",
+            "role": "user"
+        },
+        {
+            "username": "UCS",
+            "password": "123456",
+            "store": "UCS00",
+            "role": "user"
+        },
+        {
+            "username": "ucs",
+            "password": "123456",
+            "store": "UCS00",
+            "role": "user"
+        }
+    ]
+}

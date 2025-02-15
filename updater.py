@@ -105,4 +105,4 @@ def get_updates():
         messagebox.showerror(
             "Güncelleme Hatası",
             f"Güncelleme sırasında bir hata oluştu:\n{str(e)}"
-        ) 
+        )

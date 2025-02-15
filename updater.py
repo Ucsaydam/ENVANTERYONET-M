@@ -2,6 +2,7 @@ import requests
 import os
 import json
 import sys
+import subprocess
 from tkinter import messagebox
 
 # GitHub repo bilgileri
@@ -13,6 +14,24 @@ def get_base_path():
     if getattr(sys, 'frozen', False):
         return sys._MEIPASS
     return os.path.dirname(os.path.abspath(__file__))
+
+def install_requirements():
+    """Gerekli kütüphaneleri yükler"""
+    try:
+        # requirements.txt'yi oku
+        with open('requirements.txt', 'r') as f:
+            requirements = f.read()
+        
+        # pip ile yükleme yap
+        subprocess.check_call([sys.executable, "-m", "pip", "install", "-r", "requirements.txt"])
+        
+        return True
+    except Exception as e:
+        messagebox.showerror(
+            "Hata",
+            f"Kütüphaneler yüklenirken hata oluştu:\n{str(e)}"
+        )
+        return False
 
 def check_for_updates(silent=False):
     """Güncellemeleri kontrol eder"""
@@ -42,7 +61,9 @@ def check_for_updates(silent=False):
                     f"Yeni sürüm mevcut!\n\nMevcut sürüm: {current_version}\n"
                     f"Yeni sürüm: {latest_version}\n\nŞimdi güncellemek ister misiniz?"
                 ):
-                    get_updates()
+                    # Önce gerekli kütüphaneleri yükle
+                    if install_requirements():
+                        get_updates()
             return False
         else:
             if not silent:
@@ -70,7 +91,8 @@ def get_updates():
             'stock_management.py',
             'stock_management_gui.py',
             'updater.py',
-            'version.json'
+            'version.json',
+            'requirements.txt'
         ]
         
         # Dosyaları GitHub'dan indir

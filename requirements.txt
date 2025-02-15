@@ -1,3 +1,5 @@
 customtkinter
 pillow
-requests 
+requests
+matplotlib
+pandas 
